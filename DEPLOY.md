@@ -54,9 +54,10 @@ git push -u origin main
 3. Import your GitHub repo
 4. Configure:
    - **Framework**: Next.js
-   - **Root Directory**: client
-   - **Build Command**: `npm run build`
-   - **Output Directory**: .next
+   - **Root Directory**: LEAVE EMPTY (use root)
+   - **Build Command**: `cd client && npm install && npm run build`
+   - **Output Directory**: `client/.next`
+   - **Install Command**: `cd client && npm install`
 5. Add Environment Variables:
    ```
    NEXT_PUBLIC_API_URL=https://chrono-luxury-api.onrender.com/api
@@ -65,6 +66,11 @@ git push -u origin main
    ```
 6. Click "Deploy"
 7. Your site will be live at: https://your-project.vercel.app
+
+**If you get 404 error:**
+- Go to Project Settings → General
+- Set Root Directory to: `client`
+- Redeploy
 
 ## Step 5: Setup MongoDB Atlas (Free)
 
